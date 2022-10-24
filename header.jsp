@@ -9,7 +9,6 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <head>
-    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -72,16 +71,24 @@
                     <div class="col-sm-8">
                         <div class="shop-menu pull-right">
                             <ul class="nav navbar-nav">
-                                <li><a href="#"><i class="fa fa-user"></i> Account</a></li>
-                                <li><a href="checkout.html"><i class="fa fa-crosshairs"></i> Checkout</a></li>
-                                <li><a href="cart.html"><i class="fa fa-shopping-cart"></i> Cart</a></li>
-
-                                <c:if test="${sessionScope.currentUser != null}">
-                                    <li><a href="LogoutController"><i class="fa fa-lock"></i> Logout</a></li>
+                                <c:if test="${not empty sessionScope.currentUser}">
+                                    <li><a><i class="fa"></i>Welcome, ${sessionScope.currentUser.fullname}</a></li>
+                                    <li><a href="profile"><i class="fa fa-user"></i>My Account</a></li>
+                                    <li><a href="my_course"><i class="fa fa-star"></i> My Course</a></li>
+                                    <c:if test="${(sessionScope.currentUser.role_id eq 1) || (sessionScope.currentUser.role_id eq 2) || (sessionScope.currentUser.role_id eq 3) || (sessionScope.currentUser.role_id eq 4)}">
+                                    <li><a href="pie_chart_controller"><i class="fa fa-home"></i> Management Page</a></li>
                                     </c:if>
-                                    <c:if test="${sessionScope.currentUser == null}">
-                                    <li><a href="login_controller"><i class="fa fa-lock"></i> Login</a></li>
-                                    </c:if>   
+                                </c:if>
+
+
+                                <c:choose>
+                                    <c:when test="${not empty sessionScope.currentUser}">
+                                        <li><a href="login_controller"><i class="fa fa-lock"></i> Logout</a></li>
+                                        </c:when>
+                                        <c:otherwise>
+                                        <li><a href="login_controller"><i class="fa fa-lock"></i> Login</a></li>
+                                        </c:otherwise>
+                                    </c:choose>
                             </ul>
                         </div>
                     </div>
@@ -106,7 +113,8 @@
                                 <li><a href="list_home_controller" class="active">Home</a></li>
                                 <li><a href="CourseListController">Course List</a></li>
                                 <li><a href="blog_list_controller" target="_blank">Blog List</a></li>
-                                <li><a href="#" target="_blank"></a></li>
+                                <li><a href="SubjectLessonController" target="_blank">Subject Lesson</a></li>
+                                <li><a href="contact-us.html" target="_blank">Contact</a></li>
                             </ul>
                         </div>
                     </div>
