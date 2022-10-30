@@ -1,0 +1,22 @@
+
+.single-blog-post .blog-infor{
+    margin-left: -155px;
+    margin-top: -22px;
+    
+}
+.single-blog-post .blog-infor p{
+    width: 100px;
+}
+.single-blog-post .blog-infor h3{
+    font-weight: bold;
+}
+.left-sidebar .feature img{
+    width: 300px;
+}
+.left-sidebar .feature h4{
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.search_box .btn{
+    margin-top: 0 !important;
+}
