@@ -1,10 +1,3 @@
-<%-- 
-    Document   : CourseList
-    Created on : Mar 04, 2022, 8:49:17 PM
-    Author     : ductd
---%>
-
-
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>

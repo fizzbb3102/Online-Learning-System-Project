@@ -53,19 +53,21 @@
                                 </div>
                             </c:forEach>
                             <c:forEach begin="2" end="3" items="${slides}" var="o">
-                                <div class="item">
-                                    <div class="col-sm-4">
-                                        <h1><span>ONLINE</span>-LEARN</h1>
-                                        <h2>${o.name}</h2>
-                                        <p>${o.detail}</p>
-                                        <a href="blog.html" target="_blank">
-                                            <button type="button" class="btn btn-default get">Get it now</button>	
-                                        </a>
-                                    </div>
-                                    <div class="col-sm-8">
-                                        <img src="images/slide/${o.image}" class="girl img-responsive" alt="" />
-                                    </div>
-                                </div>
+                                <c:if test="${o.status == 'active'}">
+                                    <div class="item">
+                                        <div class="col-sm-4">
+                                            <h1><span>ONLINE</span>-LEARN</h1>
+                                            <h2>${o.name}</h2>
+                                            <p>${o.detail}</p>
+                                            <a href="blog.html" target="_blank">
+                                                <button type="button" class="btn btn-default get">Get it now</button>	
+                                            </a>
+                                        </div>
+                                        <div class="col-sm-8">
+                                            <img src="images/slide/${o.image}" class="girl img-responsive" alt="" />
+                                        </div>
+                                    </div></c:if>
+
                             </c:forEach>
 
                         </div>

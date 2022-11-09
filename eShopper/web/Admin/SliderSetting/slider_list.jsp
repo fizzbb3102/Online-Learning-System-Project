@@ -50,7 +50,7 @@
         <!-- header logo: style can be found in header.less -->
         <div class="wrapper row-offcanvas row-offcanvas-left">
             <!-- Left side column. contains the logo and sidebar -->
-            
+
             <jsp:include page="/Admin/admin_sidebar.jsp" />
 
             <aside class="right-side">
@@ -132,8 +132,10 @@
                                     <div class="pagination-area">
                                         <ul class="pagination">
                                             <c:forEach begin="1" end="${endPage}" var="o">
-                                                <li class="${tag == o?"active":""}"><a href="sliders_list_controller?index=${o}">${o}</a></li>
-                                                </c:forEach>
+                                                <li class="${tag == o?"active":""}">
+                                                    <a href="sliders_list_controller?index=${o}">${o}</a>
+                                                </li>
+                                            </c:forEach>
                                         </ul>
                                     </div>
                             </section>
