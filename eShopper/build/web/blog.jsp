@@ -81,7 +81,7 @@
                         </div>
 
                         <h2>Top 5 Featured</h2>
-                        <c:forEach items="${topFeatured}" var="o">
+                        <c:forEach items="${blogs}" var="o">
                             <div class="left-sidebar">
                                 <div class="feature">
                                     <a href="blog_single_controller?id=${o.id}">
