@@ -92,7 +92,7 @@
                                                 </form>
                                             </div>
                                             <div class="row" style="margin-left: 3px">
-                                                <a href="sliders_list_controller?action=addGet" style="font-size: 17px;text-decoration: underline">Add New Slider</a>
+                                                <a href="sliders_list_controller?action=addGet" style="font-size: 17px;text-decoration: underline"><button class="btn-primary">Add New Slider</button></a>
                                             </div>
                                         </div>
                                     </div>
