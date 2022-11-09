@@ -35,7 +35,6 @@
             <div class="row">
                 <div class="col-sm-12">
                     <div id="slider-carousel" class="carousel slide" data-ride="carousel">
-
                         <div class="carousel-inner">
                             <c:forEach begin="0" end="0" items="${slides}" var="o">
                                 <div class="item active">
