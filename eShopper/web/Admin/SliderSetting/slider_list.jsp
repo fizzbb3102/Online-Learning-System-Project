@@ -74,12 +74,12 @@
                                                             <option <c:if test="${selected == 'active'}">selected="selected"</c:if> value="active">active</option>
                                                             <option <c:if test="${selected == 'deactive'}">selected="selected"</c:if> value="deactive">non-active</option>
                                                             </select>
+                                                            <br>
                                                             <button type="submit">Search</button>
                                                         </form>
                                                     </div>
                                                     <form action="sliders_list_controller?action=search" method="post">
                                                         <div class="col-12 col-md-8">
-
                                                             <div class="input-group">
                                                                 <input type="text" class="form-control" placeholder="title/description" name="txtSearch" value="${txtSearch}"/>
                                                             <div class="input-group-btn">
