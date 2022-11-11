@@ -156,10 +156,10 @@
                                             <td>
                                             <c:choose>
                                                 <c:when test="${info.role_id eq 1}">
-                                                    Admin
+                                                    Expert
                                                 </c:when>
                                                 <c:when test="${info.role_id eq 2}">
-                                                    Expert
+                                                    Admin
                                                 </c:when>
                                                 <c:when test="${info.role_id eq 3}">
                                                     Marketing
